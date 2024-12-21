@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<center>
+    <h3>{{ message }}
+</center>
+</h3>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<body>
+    <center>
+        <div class="container">
+        <h1>File Upload</h1>
+        <form method="post" enctype="multipart/form-data"><label for="file">choose files:</label></br>
+            <input type="file" id="file" name="file" acept=".jpg, .png, .pdf, .jpeg, .py, .txt, .docx, .doc" multiple
+                required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="upload">
+            </div>
+        </form>
+    </center>
+</body>
+{% block content %}{% endblock %}
+</html>

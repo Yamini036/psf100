@@ -1,0 +1,14 @@
+{% extends 'dashboard.html' %}
+{% block addcss %}
+<!-- <link rel="stylesheet" href="{{url_for('static',filename='addnotes.css')}}"> -->
+{% endblock %}
+{% block content %}
+<div class="one">
+    <h1>{{notesdata[3]}}</h1>
+    <label>Title</label>
+    <input type="text" placeholder="Enter the title" name="title" value="{{notesdata[1]}}"readonly/><br>
+    <label>Description</label>
+    <input type="text1" placeholder="Enter Description" name="desc" readonly>{{notesdata[2]}}</textarea><br><br>
+    <button class="btn1">Submit</button>
+</div>
+{% endblock content %}
